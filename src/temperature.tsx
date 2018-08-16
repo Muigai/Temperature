@@ -1,4 +1,4 @@
-import { TextBox, textVal } from "rahisi";
+import { TextBox } from "rahisi";
 import { React } from "rahisi";
 import * as S from "rahisi";
 
@@ -51,7 +51,7 @@ const temperatureInput = (
     return (
         <fieldset>
             <legend>Enter temperature in {scaleNames[scale]}:</legend>
-            <TextBox value={getValue} onKeyUp={(s) => setTemperature(textVal(s), scale)} />
+            <TextBox value={getValue} onTextChanged={(s) => setTemperature(s, scale)} />
         </fieldset>
     );
 
